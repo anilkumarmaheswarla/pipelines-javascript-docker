@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'anilkumarmaheswarlapipelinesjavascriptdocker-1017.app'
+    environment: 'anilkumarmaheswarlapipelinesjavascriptdocker-1017.default'
     strategy:
       runOnce:
         deploy:
@@ -91,7 +91,7 @@ stages:
       runOnce:
         deploy:
           steps:
-          - reviewApp: app
+          - reviewApp: default
 
           - task: Kubernetes@1
             displayName: 'Create a new namespace for the pull request'
@@ -134,7 +134,7 @@ stages:
           # Getting the IP of the deployed service and writing it to a variable for posing comment
           - script: |
               url="$(get.KubectlOutput)"
-              message="Your review app has been deployed"
+              message="Your review defult has been deployed"
               if [ ! -z "$url" -a "$url" != "http://:" ]
               then
                 message="${message} and is available at $url.<br><br>[Learn More](https://aka.ms/testwithreviewapps) about how to test and provide feedback for the app."
