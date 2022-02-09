@@ -7,7 +7,7 @@ const HOST = '0.0.0.0';
 
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Welcome to DevOps. My First CI/CD Pipeline!!\n');
+  res.send('Welcome to DevOps. Hello, this is my First CI/CD Pipeline!!\n');
 });
 
 app.listen(PORT, HOST);
