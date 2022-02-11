@@ -77,7 +77,7 @@ stages:
                 $(Pipeline.Workspace)/manifests/service.yml
               imagePullSecrets: |
                 $(imagePullSecret)
-			  imagePullPolicy: Always
+			        imagePullPolicy: Always
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
 
