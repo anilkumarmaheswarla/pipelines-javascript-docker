@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'anilkumarmaheswarlapipelinesjavascriptdocker-1017.app'
+    environment: 'anilnewenv.app'
     strategy:
       runOnce:
         deploy:
@@ -87,7 +87,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
 
-    environment: 'anilkumarmaheswarlapipelinesjavascriptdocker-1017.$(k8sNamespaceForPR)'
+    environment: 'anilnewenv-1017.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
         deploy:
