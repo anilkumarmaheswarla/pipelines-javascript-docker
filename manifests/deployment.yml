@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: anilkumarmaheswarlapipelinesjavascriptdocker 
 spec:
-  progressDeadlineSeconds: 3600
+  progressDeadlineSeconds: 30
   replicas: 1
   selector:
     matchLabels:
